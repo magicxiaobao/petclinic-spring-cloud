@@ -4,6 +4,8 @@ spring:
       uri: http://localhost:8888
   application:
     name: vets-service
+  cache:
+    cache-names: vets
 ---
 spring:
   profiles: docker

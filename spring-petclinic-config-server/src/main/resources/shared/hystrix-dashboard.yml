@@ -1,0 +1,15 @@
+server:
+  port: 7979
+
+---
+spring:
+  application:
+    name: hystrix-dashboard
+  profiles: docker
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka/

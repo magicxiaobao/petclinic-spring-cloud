@@ -1,0 +1,23 @@
+spring:
+  profiles: default
+eureka:
+  instance:
+    # enable to register multiple app instances with a random server port
+    instance-id: ${spring.application.name}:${random.uuid}
+
+---
+spring:
+  application:
+    name: visits-service
+  profiles: docker
+  zipkin:
+    baseUrl: http://tracing-server:9411
+server:
+  port: 8082
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka/

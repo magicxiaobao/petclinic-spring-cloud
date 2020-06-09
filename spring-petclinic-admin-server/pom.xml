@@ -18,7 +18,7 @@
     <properties>
         <spring-boot-admin.version>2.2.2</spring-boot-admin.version>
         <docker.image.exposed.port>9090</docker.image.exposed.port>
-        <docker.image.dockerfile.dir>${basedir}/../docker</docker.image.dockerfile.dir>
+        <docker.image.dockerfile.dir>${basedir}/../docker/app</docker.image.dockerfile.dir>
     </properties>
 
     <dependencies>

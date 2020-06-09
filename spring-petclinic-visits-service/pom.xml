@@ -16,7 +16,7 @@
 
     <properties>
         <docker.exposed.port>8081</docker.exposed.port>
-        <docker.image.dockerfile.dir>${basedir}/../docker</docker.image.dockerfile.dir>
+        <docker.image.dockerfile.dir>${basedir}/../docker/app</docker.image.dockerfile.dir>
     </properties>
 
 	<dependencies>
